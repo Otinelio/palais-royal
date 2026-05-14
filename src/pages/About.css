@@ -1,0 +1,173 @@
+.about-page {
+  width: 100%;
+  background-color: #F5F0E8;
+}
+
+.about-hero {
+  position: relative;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=1920');
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.about-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(26, 26, 26, 0.6);
+  z-index: 2;
+}
+
+.about-hero-title {
+  position: relative;
+  z-index: 10;
+  font-size: 40px;
+  color: #F5F0E8;
+}
+
+@media (min-width: 768px) {
+  .about-hero-title {
+    font-size: 56px;
+  }
+}
+
+.about-history {
+  padding: 80px 24px;
+}
+
+.about-history-grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+@media (min-width: 768px) {
+  .about-history-grid {
+    flex-direction: row;
+    align-items: center;
+  }
+  .about-history-text, .about-history-image {
+    flex: 1;
+  }
+}
+
+.about-history-text p {
+  line-height: 1.7;
+  color: rgba(26, 26, 26, 0.8);
+}
+
+.about-history-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+}
+
+.about-values {
+  padding: 80px 24px;
+  background-color: #FAFAF8;
+}
+
+.values-grid {
+  max-width: 1000px;
+  margin: 40px auto 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .values-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.value-card {
+  background-color: #F5F0E8;
+  padding: 32px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+}
+
+.value-card h3 {
+  font-size: 20px;
+  color: #1A1A1A;
+}
+
+.value-card p {
+  font-size: 14px;
+  color: rgba(26, 26, 26, 0.7);
+  line-height: 1.6;
+}
+
+.about-location {
+  padding: 80px 24px;
+  background-color: #1A1A1A;
+  color: #F5F0E8;
+  display: flex;
+  justify-content: center;
+}
+
+.location-card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.location-card h2 {
+  font-size: 32px;
+}
+
+.location-address {
+  font-size: 16px;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+/* Animations specific to About */
+.reveal .slide-in-left {
+  opacity: 0;
+}
+.reveal.visible .slide-in-left {
+  animation: slideInLeft 600ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.reveal .slide-in-right {
+  opacity: 0;
+}
+.reveal.visible .slide-in-right {
+  animation: slideInRight 600ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}

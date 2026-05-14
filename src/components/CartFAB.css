@@ -1,0 +1,49 @@
+.cart-fab {
+  position: fixed;
+  bottom: 84px; /* 60px mobile nav + 24px */
+  right: 24px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #D4AF37;
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 90;
+  animation: fabAppear 300ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@media (min-width: 768px) {
+  .cart-fab {
+    bottom: 24px; /* no mobile nav on desktop */
+  }
+}
+
+.cart-fab-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #8B1A2F;
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: badgePop 250ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes fabAppear {
+  from { transform: scale(0); }
+  to { transform: scale(1); }
+}
+
+@keyframes badgePop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.4); }
+  100% { transform: scale(1); }
+}

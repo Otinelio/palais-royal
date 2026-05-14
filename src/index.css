@@ -1,0 +1,117 @@
+:root {
+  --or-royal: #D4AF37;
+  --anthracite-palais: #1A1A1A;
+  --creme-ivoire: #F5F0E8;
+  --bourgogne-grenat: #8B1A2F;
+  --vert-emeraude: #2E7D59;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--creme-ivoire);
+  color: var(--anthracite-palais);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6, .playfair {
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+}
+
+.poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  outline: none;
+}
+
+/* Utilities */
+.img-palais {
+  filter: saturate(1.15) contrast(1.05);
+  transition: filter 300ms ease;
+}
+
+.img-palais:hover {
+  filter: saturate(1.25) contrast(1.08);
+}
+
+.bg-or-royal { background-color: var(--or-royal); }
+.bg-anthracite { background-color: var(--anthracite-palais); }
+.bg-creme { background-color: var(--creme-ivoire); }
+
+.text-or-royal { color: var(--or-royal); }
+.text-anthracite { color: var(--anthracite-palais); }
+.text-creme { color: var(--creme-ivoire); }
+.text-bourgogne { color: var(--bourgogne-grenat); }
+.text-emeraude { color: var(--vert-emeraude); }
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 600ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(32px);
+  animation: slideUp 600ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-700 { animation-delay: 700ms; }
+.delay-900 { animation-delay: 900ms; }
+
+/* Scrollbar styling (optional but looks good for premium sites) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--creme-ivoire);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(26, 26, 26, 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(26, 26, 26, 0.6);
+}
